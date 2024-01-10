@@ -348,9 +348,9 @@ public:
         m_writingString = false;
         m_stringSize = 0;
 
-        // ReadFromTheSocket() returns true if we read something from the socket
         // AnalyzeReadData() returns true if we need to continue reading from the socket
-        while ( (ReadFromTheSocket() == true) && (AnalyzeReadData() == true) );
+        // ReadFromTheSocket() returns true if we read something from the socket
+        while ( (AnalyzeReadData() == true) && (ReadFromTheSocket() == true) );
     }
 
     void OnSocketShutdown( const AutoPtr<ShutdownNotification>& pNf )
