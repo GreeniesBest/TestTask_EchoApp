@@ -20,11 +20,7 @@ To check that telnet service is running: sudo systemctl status inetd
 
 To compile and run the EchoApp perform following steps in order as below:
 
-1) extract EchoApp:
-tar -xf EchoApp.tar.gz
-
-2) get in to the EchoApp directory:
-cd EchoApp
+1) get snapshot of the EchoApp from Github repository, extract it to some directory, open console and enter "cd <directory where EchoApp extracted>"  
 
 3) compile EchoApp:
 make
