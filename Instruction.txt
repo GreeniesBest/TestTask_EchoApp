@@ -1,0 +1,46 @@
+-------------------------------------------
+                   Notes
+-------------------------------------------
+
+1) I got EchoServer example from the Poco library (\Net\samples\EchoServer) and reworked it according to the my task need. The rework is heavy! The resulting EchoApp works in single thread: uses non blocking sockets and uses asynchronous handling of the socket(s) event's. EchoApp works fine with multiple connections.
+
+2) I compiled and tested the EchoApp on the Ubuntu 22.04.3 LTS.
+
+-------------------------------------------
+                Instruction
+-------------------------------------------
+
+In order to compile and run the EchoApp:
+- the Poco library must be installed: sudo apt-get install libpoco-dev
+- gcc compiler and make must be installed: sudo apt install build-essential
+
+For telnet application to connect without issues, install telnet service: sudo apth-get install telnetd.
+To check that telnet service is running: sudo systemctl status inetd
+
+
+To compile and run the EchoApp perform following steps in order as below:
+
+1) extract EchoApp:
+tar -xf EchoApp.tar.gz
+
+2) get in to the EchoApp directory:
+cd EchoApp
+
+3) compile EchoApp:
+make
+ 
+4) run EchoApp:
+./EchoApp
+
+5) open another terminal and run:
+telnet <IP address of the host where EchoApp is running> 28888
+
+Use 127.0.0.1 for IP address if EchoApp is locally running (do not omit the IP address argument for the telnet!):
+telnet 127.0.0.1 28888
+
+6) Type any string in the telnet app and press <enter>. Observe the shuffled string.
+
+Note1: EchoApp may handle the multiple connections simultaneously! I.e open several terminal windows and in each terminal launch the telnet to connect to the same instance of the EchoApp. It should be working fine. 
+
+
+
