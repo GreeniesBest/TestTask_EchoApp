@@ -207,7 +207,7 @@ public:
 
             try
             {
-                sentBytes = m_socket.sendBytes( m_shuffledString, m_stringSize - m_writeOffset );
+                sentBytes = m_socket.sendBytes( m_shuffledString + m_writeOffset, m_stringSize - m_writeOffset );
             }
             catch ( Poco::IOException& exc )       
             {
