@@ -34,7 +34,7 @@ telnet <IP address of the host where EchoApp is running> 28888
 Use 127.0.0.1 for IP address if EchoApp is locally running (do not omit the IP address argument for the telnet!):
 telnet 127.0.0.1 28888
 
-5) Type any string in the telnet app and press <enter>. Observe the shuffled string.
+5) Type any string in the telnet app and press <enter>. Observe the reversed string.
 
 Note1: EchoApp may handle the multiple connections simultaneously! I.e open several terminal windows and in each terminal launch the telnet to connect to the same instance of the EchoApp. It should be working fine. 
 
