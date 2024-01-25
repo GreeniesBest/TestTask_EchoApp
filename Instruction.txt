@@ -4,9 +4,9 @@
 
 1) I got EchoServer example from the Poco library (\Net\samples\EchoServer) and reworked it according to the my task need. The rework is heavy! The resulting EchoApp works in single thread: uses non blocking sockets and uses asynchronous handling of the socket(s) event's. EchoApp works fine with multiple connections.
 
-2) Note to reviewer: please treat the implementation here not as "the best i can do thing", nor "the thing i would do if this task would be a real job task", nor the "professional example". This implementation is for just demonstrating the skills (get's accustomed with Poco library and work with sockets) and nothing more!
+2) Note to reviewer: please treat the implementation here not as "the best i can do thing", nor "the thing i would do if this task would be a real job task", nor the "professional example". This implementation is for just demonstrating the skills (familiarizing with Poco library and to show some work with sockets) and nothing more!
 
-3) Note to reviewer 2: in the implementation here, I simplified things a bit: while application writes over the socket, it does not read from the socket anything. This is to simplify the implementation - to make the code a bit more easy to read and understand.
+3) Note 2 to reviewer: in the implementation here, I simplified things a bit: while application writes over the socket, it does not read from the socket anything. This is to simplify the implementation - to make the code a bit more easy to read and understand.
 
 4) I compiled and tested the EchoApp on the Ubuntu 22.04.3 LTS.
 
